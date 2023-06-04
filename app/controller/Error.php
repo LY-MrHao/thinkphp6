@@ -7,4 +7,9 @@ class Error {
     {
         return '当前控制器不存在！';
     }
+
+    public function miss()
+    {
+        return '404 Not Found';
+    }
 }

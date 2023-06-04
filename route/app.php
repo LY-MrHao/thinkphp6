@@ -13,5 +13,10 @@ use think\facade\Route;
 Route::get('think', function () {
     return 'hello,ThinkPHP6!';
 });
-
+ 
 Route::get('hello/:name', 'index/hello');
+// [:id]可不传入的参数
+Route::rule('details/:id', 'Address/details');
+// 跳404
+//Route::miss('public/miss');
+//Route::get('rely/:id', 'Rely/index3')->cache(['rely/:id', 3600]);
