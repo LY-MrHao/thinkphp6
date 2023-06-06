@@ -35,7 +35,19 @@ class User extends Validate
         'email' => '邮箱格式错误'
     ];
 
-    // 
+    // 验证的场景
+    protected $scene = [
+        'insert' => ['name', 'price', 'email'],
+        //'update' => ['name', 'price' ]
+    ];
+    
+    protected function sceneUpdate()
+    {
+        return $this->only(['name', 'price']) // 指定需要验证的字段列表
+            ->remove('name', 'max') // 移除某个字段的验证规则
+            ->append('price', 'require'); // 追加某个字段的验证规则
+    }
+
     /**
      * 自定义规则
      * 
