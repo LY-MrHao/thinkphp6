@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table border="1" align="center" width="700">
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>邮箱</th>
+        <th>价格</th>
+        <th>时间</th>
+    </tr>
+    {foreach $result as $obj}
+    <tr>
+        <td>{$obj->id}</td>
+        <td>{$obj->username}</td>
+        <td>{$obj->gender|default='未知'}</td>
+        <td>{$obj->email|default='无'}</td>
+        <td>{$obj->price}</td>
+        <td>{$obj->time|default='1970-01-01'}</td>
+    </tr>
+    {/foreach}
+</table>
+
+<br>
+
+<table border="1" align="center" width="700">
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>邮箱</th>
+        <th>价格</th>
+        <th>时间</th>
+    </tr>
+    {volist name='result' id='obj'}
+    {/*volist name='result' id='obj' offset='1' length='5'*/}
+    <tr>
+        <td>{$obj->id}</td>
+        <td>{$obj->username}</td>
+        <td>{$obj->gender}</td>
+        <td>{$obj->email}</td>
+        <td>{$obj->price}</td>
+        <td>{$obj->time}</td>
+    </tr>
+    {/volist}
+</table>
+
+<br>
+
+{for start='1' end='100' name='i'}
+    {$i}
+{/for}
+</body>
+</html>

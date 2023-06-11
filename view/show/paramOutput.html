@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--数组-->
+{$array.name}-----{$array.sex}-----{$array.aaa|default='为空'}
+<br>
+<!--对象-->
+{$object->age}----{$object::PI}-----{$object->fn()}
+<br>
+<!--注入的参数-->
+{$Request.get.id}----{$Request.param.id}
+<br>
+<!--md5加密|日期格式转换-->
+{$password|md5|raw}-------{$time|date='Y-m-d H:i:s'}
+<br>
+<!--字符串切割-->
+{$array.name|substr=0,3}-------{:md5(substr($array.name, 0, 3))}
+
+</body>
+</html>

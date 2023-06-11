@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--判断相等-->
+{eq name='username' value='Mr.Hao'}
+    相等
+{/eq}
+
+<!--value是变量的场合-->
+{eq name='username' value='$key'}
+    相等
+{else/}
+    不相等
+{/eq}
+
+<!--变量定义-->
+{assign name="var" value="123"}
+{$var}
+<!--常量定义-->
+{define name="PI" value="3.14"}
+{$Think.const.PI}
+
+</body>
+</html>

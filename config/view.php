@@ -22,4 +22,8 @@ return [
     'taglib_begin'  => '{',
     // 标签库标签结束标记
     'taglib_end'    => '}',
+    // 模板布局
+    // https://www.bilibili.com/video/BV12E411y7u8?p=67&vd_source=876310473848f93a71534c1ff298be34
+    // 'layout_on'     => true,
+    // 'layout_name'   => 'public/layout',
 ];
