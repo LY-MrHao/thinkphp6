@@ -6,5 +6,10 @@ return [
     // 多语言加载
     // \think\middleware\LoadLangPack::class,
     // Session初始化
-    \think\middleware\SessionInit::class
+    \think\middleware\SessionInit::class,
+
+    // 中间件(可以在config/middleware.php重命名)
+    'check',
+    'loginInfo',
+    'error'
 ];
